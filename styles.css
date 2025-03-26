@@ -1,0 +1,215 @@
+/* Import Hanken Grotesk font */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(221, 100%, 96%);
+}
+
+/* Main content container */
+.content {
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(61, 108, 236, 0.15);
+    width: 736px;
+}
+
+/* Left panel styles */
+.left-panel {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 32px;
+    padding: 38px 54px;
+    text-align: center;
+    color: hsl(241, 100%, 89%);
+    width: 368px;
+}
+
+.left-panel h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.score-circle {
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-circle .score {
+    color: hsl(0, 0%, 100%);
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.score-circle .total {
+    color: hsla(241, 100%, 89%, 0.5);
+    margin-top: 8px;
+}
+
+.left-panel .result-text {
+    color: hsl(0, 0%, 100%);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.left-panel .result-description {
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+/* Right panel styles */
+.right-panel {
+    padding: 38px 40px;
+    width: 368px;
+}
+
+.right-panel h2 {
+    color: hsl(224, 30%, 27%);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.summary-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 41px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.summary-item .category {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.summary-item .category img {
+    width: 20px;
+    height: 20px;
+}
+
+.summary-item .score {
+    color: hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+.summary-item .score span {
+    color: hsla(224, 30%, 27%, 0.5);
+}
+
+/* Category specific styles */
+.summary-item.reaction {
+    background-color: hsla(0, 100%, 67%, 0.05);
+    color: hsl(0, 100%, 67%);
+}
+
+.summary-item.memory {
+    background-color: hsla(39, 100%, 56%, 0.05);
+    color: hsl(39, 100%, 56%);
+}
+
+.summary-item.verbal {
+    background-color: hsla(166, 100%, 37%, 0.05);
+    color: hsl(166, 100%, 37%);
+}
+
+.summary-item.visual {
+    background-color: hsla(234, 85%, 45%, 0.05);
+    color: hsl(234, 85%, 45%);
+}
+
+/* Continue button */
+.continue-btn {
+    width: 100%;
+    padding: 17px;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 128px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    body {
+        align-items: flex-start;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .content {
+        flex-direction: column;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .left-panel {
+        border-radius: 0 0 32px 32px;
+        padding: 24px 57px 40px;
+        width: 100%;
+    }
+
+    .right-panel {
+        padding: 24px 30px 30px;
+        width: 100%;
+    }
+
+    .score-circle {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 24px;
+    }
+
+    .score-circle .score {
+        font-size: 56px;
+    }
+
+    .left-panel .result-text {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .left-panel .result-description {
+        font-size: 16px;
+    }
+}

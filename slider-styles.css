@@ -1,0 +1,101 @@
+/* Container voor het design */
+.design-reference {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1440px;
+    /* Desktop design width */
+    height: 900px;
+    /* Desktop design height */
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    opacity: 0.5;
+}
+
+/* Opacity control styling */
+.opacity-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.opacity-control label {
+    font-size: 14px;
+    color: #333;
+}
+
+.opacity-control input[type="range"] {
+    width: 100px;
+}
+
+.opacity-control #opacity-value {
+    min-width: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Layer toggle styling */
+.layer-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #eee;
+}
+
+.layer-toggle input[type="checkbox"] {
+    margin: 0;
+}
+
+.layer-toggle label {
+    font-size: 14px;
+    color: #333;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Desktop design (standaard) */
+@media (min-width: 768px) {
+    .design-reference {
+        background-image: url('design/desktop-design.jpg');
+    }
+}
+
+/* Mobiel design */
+@media (max-width: 767px) {
+    .design-reference {
+        width: 375px;
+        /* Mobile design width */
+        height: 809px;
+        /* Mobile design height */
+        background-image: url('design/mobile-design.jpg');
+    }
+}
+
+/* Bestaande content bovenop het design */
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
