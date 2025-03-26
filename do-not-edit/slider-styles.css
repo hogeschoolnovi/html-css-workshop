@@ -70,7 +70,7 @@
 /* Desktop design (standaard) */
 @media (min-width: 768px) {
     .design-reference {
-        background-image: url('design/desktop-design.jpg');
+        background-image: url('../design/desktop-design.jpg');
     }
 }
 
@@ -81,7 +81,7 @@
         /* Mobile design width */
         height: 809px;
         /* Mobile design height */
-        background-image: url('design/mobile-design.jpg');
+        background-image: url('../design/mobile-design.jpg');
     }
 }
 
